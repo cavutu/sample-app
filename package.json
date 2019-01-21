@@ -1,0 +1,30 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "description": "This is a sample server to display dummy stats",
+  "main": "index.js",
+  "scripts": {
+	"prestart": "npm install",
+	"start": "node index.js",
+        "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cavutu/sample-app/"
+  },
+  "keywords": [
+    "swagger",
+    "node",
+    "docker",
+    "dockerfile"
+  ],
+  "author": "avutuc@vmware.com",
+  "license": "Unlicense",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "swagger-tools": "0.10.1",
+    "test": ">=0.6.0"
+  }
+}

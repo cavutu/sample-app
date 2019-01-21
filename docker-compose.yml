@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  sample-app:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    expose:
+      - 7200
+    ports:
+      - 7200:7200
+    networks:
+      - sample-app
+    environment:
+      SERVER_ADDRESS: 0.0.0.0
+    container_name: sample-app
+  adminer:
+    image: adminer
+    restart: always
+    expose:
+      - 8090
+    ports:
+      - 8090:8090
+    networks:
+      - sample-app
+    container_name: adminer
+
+networks:
+  sample-app:
+    driver: bridge
+
